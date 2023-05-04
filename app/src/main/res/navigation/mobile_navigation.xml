@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_start">
+
+    <fragment
+        android:id="@+id/navigation_start"
+        android:name="com.example.pamo.ui.home.HomeFragment"
+        android:label="@string/start"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_navigation_start_to_quizFragment"
+            app:destination="@id/quizFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_bmi"
+        android:name="com.example.pamo.ui.main.MainActivity"
+        android:label="@string/title_bmi"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_navigation_bmi_to_chartFragment2"
+            app:destination="@id/chartFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_dashboard"
+        android:name="com.example.pamo.ui.dashboard.DashboardFragment"
+        android:label="@string/title_calories"
+        tools:layout="@layout/fragment_dashboard" />
+
+    <fragment
+        android:id="@+id/navigation_notifications"
+        android:name="com.example.pamo.ui.notifications.NotificationsFragment"
+        android:label="@string/title_recipes"
+        tools:layout="@layout/fragment_notifications" />
+    <fragment
+        android:id="@+id/chartFragment"
+        android:name="com.example.pamo.ui.chart.ChartFragment"
+        android:label="fragment_chart"
+        tools:layout="@layout/fragment_chart" />
+    <fragment
+        android:id="@+id/quizFragment"
+        android:name="com.example.pamo.ui.quiz.QuizFragment"
+        android:label="fragment_quiz"
+        tools:layout="@layout/fragment_quiz" />
+</navigation>
